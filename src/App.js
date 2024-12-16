@@ -1,18 +1,31 @@
+
+
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Shop from './pages/Shop';
 import Footer from './components/Footer/Footer';
-import { Route, Routes } from 'react-router-dom';
+import LoginPage from './components/login/login';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Navbar />
-      <Shop />
-      <Footer/>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<LoginPage/>} />
+        
+        <Route path="/" element={
+            <>
+              <Navbar />
+              <Shop/>
+            </>
+          }
+        />
 
-    </div>
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

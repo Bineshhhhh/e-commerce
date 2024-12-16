@@ -3,9 +3,17 @@ import './Navbar.css';
 import logo from '../assets/ME.png';
 import cart_icon from '../assets/cart_icon.png';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
+
+    const navigate = useNavigate();
+  
+    const handleLoginClick = () => {
+      navigate('/login'); // Navigate to the login page
+    
+    }
 
   return (
     <div>
@@ -29,7 +37,7 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="nav-login-cart">
-          <button>Login</button>
+          <button onClick = {handleLoginClick}> Login</button>
           <img src={cart_icon} alt="Cart Icon" />
           <div className="nav-cart-count">10</div>
         </div>
