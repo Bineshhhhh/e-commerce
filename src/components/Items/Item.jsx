@@ -12,9 +12,10 @@ const Item = (props) => {
         </div>
         <div className='item-price-old'>
             ${props.old_price}
-
         </div>
       </div>
+      <button type='button'>Add to Cart</button>
+
     </div>
   )
 }
