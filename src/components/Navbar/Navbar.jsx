@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="navbar">
         <div className="nav-logo">
           <img src={logo} alt="Logo" />
-          <p>JUST BUY IT</p>
+          <p>BINESH</p>
         </div>
         <ul className="nav-menu">
           <li onClick={() => setMenu("shop")} className={menu === "shop" ? "active" : ""}>
