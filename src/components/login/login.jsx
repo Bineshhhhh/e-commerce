@@ -30,6 +30,7 @@ const LoginPage = () => {
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
+        <h1>JUST BUY IT</h1>
         <h2>{isRegistering ? "Register" : "Login"}</h2>
         {errorMessage && <p className="error-message">{errorMessage}</p>}
         <div className="form-group">
