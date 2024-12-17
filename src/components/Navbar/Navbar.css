@@ -1,7 +1,13 @@
 .navbar{
     display: flex;
     justify-content: space-around;
-    padding: 16px;
+    flex-flow: row nowrap;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    margin: 0 auto;
+    padding: 0;
     box-shadow: 0 1px 3px -2px black;
 }
 .nav-logo img{
@@ -30,6 +36,7 @@
     font-weight: 500;
     /*background-color: aqua;*/
     padding-right: 30%;
+    
 }
 .nav-menu li{
     display: flex;
@@ -38,6 +45,7 @@
     justify-content: center;
     gap: 3px;
     cursor: pointer;
+    text-decoration: none;
 }
 .nav-menu hr{
     border: none;
@@ -79,4 +87,11 @@
     font-size: 14px;
     background: red;
     color: white;
+}
+.nav-link{
+    text-decoration: none;
+    color: inherit;
+}
+.nav-link:hover {
+    color: #262626;
 }

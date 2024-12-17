@@ -26,14 +26,17 @@ const Navbar = () => {
           <li onClick={() => setMenu("shop")} className={menu === "shop" ? "active" : ""}>
             Shop {menu === "shop" && <hr />}
           </li>
-          <li onClick={() => setMenu("mens")} className={menu === "mens" ? "active" : ""}>
-            Men {menu === "mens" && <hr />}
+          <li className={menu === "mens" ? "active" : ""} onClick={() => setMenu("men")}>
+           <Link to="/men" className="nav-link">Men</Link>
+            {menu === "men" && <hr />}
           </li>
-          <li onClick={() => setMenu("womens")} className={menu === "womens" ? "active" : ""}>
-            Women {menu === "womens" && <hr />}
+          <li className={menu === "womens" ? "active" : ""} onClick={() => setMenu("women")}>
+           <Link to="/women" className="nav-link">Women</Link>
+            {menu === "women" && <hr />}
           </li>
-          <li onClick={() => setMenu("kids")} className={menu === "kids" ? "active" : ""}>
-            Kids {menu === "kids" && <hr />}
+          <li className={menu === "kids" ? "active" : ""} onClick={() => setMenu("kid")}>
+           <Link to="/kid" className="nav-link">Kid</Link>
+            {menu === "kid" && <hr />}
           </li>
         </ul>
         <div className="nav-login-cart">
