@@ -19,19 +19,20 @@ function App() {
       <ShopContextProvider>
         <BrowserRouter>
           <Routes>
-            <Route exact path="/login" element={<LoginPage/>} />
+           
             <Route exact path="/" element={<><Navbar/><Shop/><Footer/></>}/>
             <Route exact path="/mens" element={<ShopCategory banner={men_banner} category="men"/>} />
             <Route exact path="/womens" element={<ShopCategory banner={women_banner} category="women"/>} />
             <Route exact path="/kids" element={<ShopCategory banner={kid_banner} category="kid"/>} />
             <Route exact path="/product" element={<Product/>}>
               <Route exact path=":productId" element={<Product/>}/>
-                 <Routes>
+            </Route>
+           
       <Route exact path="/" element={<><Navbar/><Shop/><Footer/></>}/>
       <Route exact path="/home" element={<><Navbar/><Shop/><Footer/></>}/>
       <Route exact path="/login" element={<LoginPage/>}/>
       
-            </Route>  
+            
           </Routes>
         </BrowserRouter>
       </ShopContextProvider>
