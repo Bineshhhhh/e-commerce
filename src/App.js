@@ -2,9 +2,10 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Shop from './pages/Shop';
 import Footer from './components/Footer/Footer';
+import LoginPage from './components/login/login';
 import { Route, Routes } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
-import LoginPage from './components/login/login';
+
 import ShopCategory from './pages/ShopCategory';
 import men_banner from './components/assets/Banners_all.jpeg'
 import women_banner from './components/assets/Banners_all.jpeg'
@@ -14,11 +15,7 @@ import ShopContextProvider from './context/ShopContext';
 
 function App() {
   return (
-    <div>
-    {/* <div className="App">
-      <Navbar />
-      <Shop />
-      <Footer/> */}
+    <div className  = 'App'>
       <ShopContextProvider>
         <BrowserRouter>
           <Routes>
@@ -29,12 +26,18 @@ function App() {
             <Route exact path="/kids" element={<ShopCategory banner={kid_banner} category="kid"/>} />
             <Route exact path="/product" element={<Product/>}>
               <Route exact path=":productId" element={<Product/>}/>
+                 <Routes>
+      <Route exact path="/" element={<><Navbar/><Shop/><Footer/></>}/>
+      <Route exact path="/home" element={<><Navbar/><Shop/><Footer/></>}/>
+      <Route exact path="/login" element={<LoginPage/>}/>
+      
             </Route>  
           </Routes>
         </BrowserRouter>
       </ShopContextProvider>
     </div>
     
+
   );
 }
 

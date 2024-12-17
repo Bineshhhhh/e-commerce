@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./login.css";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [isRegistering, setIsRegistering] = useState(false); // Toggle between Login and Register
@@ -26,11 +27,18 @@ const LoginPage = () => {
       setErrorMessage(""); // Clear error message
     }
   };
+  const navigate = useNavigate();
+
+  const returnToHome = () => {
+    navigate('/home'); // Navigate to the login page
+  
+  }
 
   return (
     <div className="login-container">
+        <h1 onClick={returnToHome}>JUST BUY IT</h1>
+
       <form className="login-form" onSubmit={handleSubmit}>
-        <h1>JUST BUY IT</h1>
         <h2>{isRegistering ? "Register" : "Login"}</h2>
         {errorMessage && <p className="error-message">{errorMessage}</p>}
         <div className="form-group">
