@@ -53,7 +53,7 @@ const ProductDisplay = (props) => {
         <button>ADD TO CART</button>
         <p className='productdisplay-right-category'><span>Category :</span>Women , Jacket, Denim</p>
         <p className='productdisplay-right-category'><span>Tags :</span>Classic , New</p>
-                                                                                                                        {/* Css 2:04 */}
+                                                                                                                       
       </div>
     </div>
   )
