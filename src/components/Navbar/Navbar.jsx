@@ -38,6 +38,9 @@ const Navbar = () => {
            <Link to="/kid" className="nav-link">Kid</Link>
             {menu === "kid" && <hr />}
           </li>
+          <li className="profile-link">
+          <Link to="/profile">Profile</Link>
+          </li>
         </ul>
         <div className="nav-login-cart">
           <button onClick = {handleLoginClick}> Login</button>
