@@ -21,6 +21,7 @@ function App() {
       <ShopContextProvider>
         <UserProvider> 
           <BrowserRouter>
+            <Navbar />
             <Routes>
               <Route exact path="/" element={<><Navbar /><Shop /><Footer /></>} />
               <Route path="/profile" element={<Profile />} />
