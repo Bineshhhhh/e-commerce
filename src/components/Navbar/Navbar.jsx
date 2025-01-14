@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import logo from '../assets/ME.png';
 import cart_icon from '../assets/cart_icon.png';
+import profile_icon from '../assets/cart_cross_icon.png';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
@@ -38,8 +39,10 @@ const Navbar = () => {
            <Link to="/kid" className="nav-link">Kid</Link>
             {menu === "kid" && <hr />}
           </li>
-          <li className="profile-link">
-          <Link to="/profile">Profile</Link>
+          <li>
+          <Link to="/profile">
+            <img src={profile_icon} alt='Profile Icon' className='profile_icon' />
+          </Link>
           </li>
         </ul>
         <div className="nav-login-cart">
@@ -47,6 +50,9 @@ const Navbar = () => {
           <img src={cart_icon} alt="Cart Icon" />
           <div className="nav-cart-count">10</div>
         </div>
+        
+        
+
       </div>
     </div>
   );
