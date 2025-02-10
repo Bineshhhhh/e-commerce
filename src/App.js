@@ -14,6 +14,7 @@ import women_banner from './components/assets/Banners_all.jpeg';
 import kid_banner from './components/assets/Banners_all.jpeg';
 import Product from './pages/Product';
 import ShopContextProvider from './context/ShopContext';
+import Cart from './pages/Cart';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
               <Route exact path="/" element={<><Navbar /><Shop /><Footer /></>} />
               <Route exact path="/home" element={<><Navbar /><Shop /><Footer /></>} />
               <Route exact path="/login" element={<LoginPage />} />
+              <Route exact path="/cart" element={<Cart />} />
             </Routes>
           </BrowserRouter>
         </UserProvider>

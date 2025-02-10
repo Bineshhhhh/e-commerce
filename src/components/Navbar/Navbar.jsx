@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../assets/ME.png';
 import cart_icon from '../assets/cart_icon.png';
 import profile_icon from '../assets/cart_cross_icon.png';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
-
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   
-    const handleLoginClick = () => {
-      navigate('/login'); // Navigate to the login page
-    
-    }
+  const handleLoginClick = () => {
+    navigate('/login'); 
+  };
 
   return (
     <div>
@@ -28,31 +25,30 @@ const Navbar = () => {
             Shop {menu === "shop" && <hr />}
           </li>
           <li className={menu === "mens" ? "active" : ""} onClick={() => setMenu("men")}>
-           <Link to="/men" className="nav-link">Men</Link>
+            <Link to="/men" className="nav-link">Men</Link>
             {menu === "men" && <hr />}
           </li>
           <li className={menu === "womens" ? "active" : ""} onClick={() => setMenu("women")}>
-           <Link to="/women" className="nav-link">Women</Link>
+            <Link to="/women" className="nav-link">Women</Link>
             {menu === "women" && <hr />}
           </li>
           <li className={menu === "kids" ? "active" : ""} onClick={() => setMenu("kid")}>
-           <Link to="/kid" className="nav-link">Kid</Link>
+            <Link to="/kid" className="nav-link">Kid</Link>
             {menu === "kid" && <hr />}
           </li>
           <li>
-          <Link to="/profile">
-            <img src={profile_icon} alt='Profile Icon' className='profile_icon' />
-          </Link>
+            <Link to="/profile">
+              <img src={profile_icon} alt='Profile Icon' className='profile_icon' />
+            </Link>
           </li>
         </ul>
         <div className="nav-login-cart">
-          <button onClick = {handleLoginClick}> Login</button>
-          <img src={cart_icon} alt="Cart Icon" />
+          <button onClick={handleLoginClick}> Login</button>
+          <Link to="/cart"> 
+            <img src={cart_icon} alt="Cart Icon" className="cart-icon" />
+          </Link>
           <div className="nav-cart-count">10</div>
         </div>
-        
-        
-
       </div>
     </div>
   );
