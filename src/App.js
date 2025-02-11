@@ -27,9 +27,9 @@ function App() {
               <Route exact path="/" element={<><Navbar /><Shop /><Footer /></>} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/edit-profile" element={<EditProfile />} />
-              <Route exact path="/mens" element={<ShopCategory banner={men_banner} category="men" />} />
-              <Route exact path="/womens" element={<ShopCategory banner={women_banner} category="women" />} />
-              <Route exact path="/kids" element={<ShopCategory banner={kid_banner} category="kid" />} />
+              <Route exact path="/men" element={<ShopCategory banner={men_banner} category="men" />} />
+              <Route exact path="/women" element={<ShopCategory banner={women_banner} category="women" />} />
+              <Route exact path="/kid" element={<ShopCategory banner={kid_banner} category="kid" />} />
               <Route exact path="/product" element={<Product />}>
                 <Route exact path=":productId" element={<Product />} />
               </Route>

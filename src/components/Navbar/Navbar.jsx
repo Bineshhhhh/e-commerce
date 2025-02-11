@@ -24,7 +24,8 @@ const Navbar = () => {
         </div>
         <ul className="nav-menu">
           <li onClick={() => setMenu("shop")} className={menu === "shop" ? "active" : ""}>
-            Shop {menu === "shop" && <hr />}
+            <Link to="/" className="nav-link">Shop</Link>
+            {menu === "shop" && <hr />}
           </li>
           <li className={menu === "mens" ? "active" : ""} onClick={() => setMenu("men")}>
             <Link to="/men" className="nav-link">Men</Link>
